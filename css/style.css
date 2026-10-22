@@ -169,3 +169,10 @@ html {
     scroll-behavior: smooth;
     /* scroll-padding-top: 80px; Angka ini akan menyisakan jarak 80px dari atas layar */
 }
+
+@media (max-width: 768px) {
+    #hero {
+        /* Browser otomatis menukar gambar ke versi Portrait */
+        background-image: url('/images/foto-mobile.jpeg'); 
+    }
+}
