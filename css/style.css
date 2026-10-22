@@ -176,3 +176,30 @@ html {
         background-image: url('/image/foto-mobile.jpeg'); 
     }
 }
+
+/* --- ICON LOVE & ANIMASI --- */
+.icon-love {
+    font-size: 8.5rem; /* Ukuran ikon, bisa dibesarkan/dikecilkan */
+    color: var(--accent-sage); /* Menggunakan warna hijau sage dari tema */
+    display: inline-block;
+    animation: detak-jantung 2s infinite; /* Mengaktifkan animasi berulang */
+    position: relative;
+    z-index: 2;
+}
+
+/* Membuat frame animasi denyut (heartbeat) */
+@keyframes detak-jantung {
+    0%   { transform: translateY(-40px) scale(1); }
+    15%  { transform: translateY(-40px) scale(1.05); } 
+    30%  { transform: translateY(-40px) scale(1); }
+    45%  { transform: translateY(-40px) scale(1.05); } 
+    70%  { transform: translateY(-40px) scale(1); }
+    100% { transform: translateY(-40px) scale(1); }
+}
+
+@media (max-width: 768px) {
+    .icon-love {
+        /* Menarik elemen di bawahnya ke atas. Besarkan angkanya (misal -80px) jika jaraknya masih terlalu jauh */
+        margin-bottom: -70px; 
+    }
+}
