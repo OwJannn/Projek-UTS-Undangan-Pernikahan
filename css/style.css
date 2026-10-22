@@ -92,6 +92,14 @@ h1, h2, h3, .font-estetik {
         width: 150px !important;
         height: 150px !important;
     }
+    #hero {
+        /* Browser otomatis menukar gambar ke versi Portrait */
+        background-image: url('/image/foto-mobile.jpeg'); 
+    }
+    .icon-love {
+        /* Menarik elemen di bawahnya ke atas. Besarkan angkanya (misal -80px) jika jaraknya masih terlalu jauh */
+        margin-bottom: -70px; 
+    }
 }
 
 .card-sage {
@@ -170,13 +178,6 @@ html {
     /* scroll-padding-top: 80px; Angka ini akan menyisakan jarak 80px dari atas layar */
 }
 
-@media (max-width: 768px) {
-    #hero {
-        /* Browser otomatis menukar gambar ke versi Portrait */
-        background-image: url('/image/foto-mobile.jpeg'); 
-    }
-}
-
 /* --- ICON LOVE & ANIMASI --- */
 .icon-love {
     font-size: 8.5rem; /* Ukuran ikon, bisa dibesarkan/dikecilkan */
@@ -197,9 +198,29 @@ html {
     100% { transform: translateY(-40px) scale(1); }
 }
 
-@media (max-width: 768px) {
-    .icon-love {
-        /* Menarik elemen di bawahnya ke atas. Besarkan angkanya (misal -80px) jika jaraknya masih terlalu jauh */
-        margin-bottom: -70px; 
-    }
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--accent-sage);
+    /* Angka rgb(156, 175, 136) ini adalah konversi dari hex #9CAF88 (accent-sage) */
+    box-shadow: 0 0 0 0.25rem rgba(156, 175, 136, 0.25);
+}
+
+.radius-custom {
+    border-radius: 20px; /* Ubah angka ini untuk mengatur seberapa bulat sudutnya */
+}
+
+/* Styling untuk tombol pilihan kehadiran */
+.btn-outline-sage {
+    color: var(--text-heading);
+    border: 1px solid var(--accent-sage);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Efek saat tombol pilihan disentuh atau dipilih */
+.btn-outline-sage:hover,
+.btn-check:checked + .btn-outline-sage {
+    background-color: var(--accent-sage);
+    color: white;
+    border-color: var(--accent-sage);
 }

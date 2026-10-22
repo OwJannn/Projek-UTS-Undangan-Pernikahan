@@ -8,7 +8,7 @@ rsvpForm.addEventListener('submit', function(e) {
 
     // 1. Ambil nilai dari inputan tamu
     const nama = document.getElementById('namaTamu').value;
-    const kehadiran = document.getElementById('statusKehadiran').value;
+    const kehadiran = document.querySelector('input[name="kehadiran"]:checked').value;
     const ucapan = document.getElementById('ucapanTamu').value;
 
     // Validasi sederhana: Pastikan nama diisi

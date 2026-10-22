@@ -75,7 +75,7 @@
             <div class="col-md-5 mb-4" data-aos="zoom-in" data-aos-delay="200">
                 <div class="card border-0 shadow-sm h-100 card-sage" >
                     <div class="card-body p-5 text-white">
-                        <h3 class="card-title mb-4" style="color: var(--bg-alabster);">Akad Nikah</h3>
+                        <h3 class="card-title mb-4" style="color: var(--bg-alabaster);">Akad Nikah</h3>
                         <p class="mb-1 fw-bold">Sabtu, 12 Desember 2026</p>
                         <p class="mb-4">08:00 - 10:00 WIB</p>
                         <p class="mb-4"><strong>Menara Eiffel</strong><br>Av. Gustave Eiffel, 75007 Paris, Prancis</p>
@@ -186,7 +186,7 @@
         <div class="row justify-content-center mt-4">
             <div class="col-md-8">
                 <!-- Card untuk Form agar rapi -->
-                <div class="card border-0 shadow-sm p-4 p-md-5" style="background-color: white;">
+                <div class="card border-0 shadow-sm p-4 p-md-5 radius-custom" style="background-color: white;">
                     <form id="rsvpForm">
                         <div class="mb-3">
                             <label class="form-label" style="color: var(--text-heading);">Nama Anda</label>
@@ -195,10 +195,13 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label" style="color: var(--text-heading);">Kehadiran</label>
-                            <select class="form-select" id="statusKehadiran" style="border-color: var(--accent-sage);">
-                                <option value="hadir">Ya, Saya akan hadir</option>
-                                <option value="tidak">Maaf, tidak bisa hadir</option>
-                            </select>
+                            <div class="d-flex gap-2">
+                                <input type="radio" class="btn-check" name="kehadiran" id="hadir" value="hadir" checked>
+                                <label class="btn btn-outline-sage flex-fill" for="hadir">Hadir</label>
+
+                                <input type="radio" class="btn-check" name="kehadiran" id="tidak" value="tidak">
+                                <label class="btn btn-outline-sage flex-fill" for="tidak">Tidak Hadir</label>
+                            </div>
                         </div>
                         <div class="mb-4">
                             <label class="form-label" style="color: var(--text-heading);">Ucapan & Doa</label>
