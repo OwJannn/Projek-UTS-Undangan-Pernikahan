@@ -1,0 +1,171 @@
+/* Mengatur Variabel Warna (The Elegant Sage) */
+:root {
+    --bg-alabaster: #E2EAE0; /* Background Utama */
+    --accent-sage: #9CAF88;  /* Tombol, Ornamen, Garis */
+    --text-heading: #5B6E53; /* Judul & Nama */
+    --text-body: #2C3625;    /* Teks Paragraf */
+}
+
+/* Mengatur Font dan Warna Dasar */
+body {
+    background-color: var(--bg-alabaster);
+    color: var(--text-body);
+    font-family: 'Montserrat', sans-serif; /* Font default untuk bacaan */
+}
+
+/* Mengatur Font Khusus untuk Nama/Judul */
+h1, h2, h3, .font-estetik {
+    font-family: 'Great Vibes', cursive;
+    color: var(--text-heading);
+}
+
+/* Kustomisasi Tombol Bootstrap (btn-dark kita ubah jadi Sage) */
+.btn-custom {
+    background-color: var(--accent-sage);
+    color: white;
+    border: none;
+    border-radius: 25px; /* Membuat ujung tombol membulat */
+    padding: 10px 30px;
+}
+
+.btn-custom:hover {
+    background-color: var(--text-heading); /* Warna sedikit gelap saat disorot */
+    color: white;
+}
+
+#hero {
+    /* Ganti URL ini dengan lokasi foto kamu nanti, misal: url('../assets/images/cover.jpg') */
+    background-image: url(/image/WhatsApp\ Image\ 2026-10-22\ at\ 10.57.32.jpeg); 
+    background-size: cover;
+    background-position: center;
+}
+
+/* Membuat overlay gelap semi-transparan agar tulisan warna putih terbaca */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 54, 37, 0.6); /* Warna Deep Olive (dari palet) dengan 40% opacity */
+    z-index: 1;
+}
+
+/* Pastikan warna teks di Hero jadi putih agar kontras */
+#hero h1, #hero h4, #hero p {
+    color: white;
+}
+
+#countdown h3 {
+    color: white !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600;
+}
+
+#countdown small {
+    color: white !important;
+}
+
+/* Mengubah indikator carousel menjadi warna Sage (Opsi 1) */
+.carousel-indicators [data-bs-target] {
+    background-color: var(--accent-sage);
+}
+
+/* Mengubah panah (icon) carousel agar memiliki bayangan halus 
+   sehingga tetap terlihat jelas di foto terang maupun gelap */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: drop-shadow(2px 4px 6px rgba(44, 54, 37, 0.8));
+}
+
+/* Menyeragamkan ukuran foto mempelai agar bulat sempurna */
+.foto-mempelai {
+    width: 200px !important;    /* Lebar pasti */
+    height: 200px !important;   /* Tinggi pasti (harus sama dengan lebar) */
+    object-fit: cover;          /* Memotong foto agar proporsional */
+}
+
+/* Jika saat dibuka di HP fotonya terasa kebesaran, kita kecilkan ukurannya di layar kecil */
+@media (max-width: 768px) {
+    .foto-mempelai {
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
+
+.card-sage {
+    background-color: var(--text-heading); /* Menggunakan Deep Olive agar mewah dan tulisan putih mudah dibaca */
+    border-radius: 15px; /* Memberi sedikit kelengkungan ekstra pada sudut Card */
+}
+
+/* Styling Tombol Terang di dalam Card Hijau */
+.btn-light-sage {
+    background-color: var(--bg-alabaster); /* Warna putih tulang */
+    color: var(--text-heading);            /* Teks hijau gelap */
+    border: none;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: 600;                      /* Tebalkan sedikit teksnya */
+    transition: all 0.3s ease;             /* Efek transisi halus saat di-hover */
+}
+
+/* Efek saat tombol di-hover (disorot mouse) */
+.btn-light-sage:hover {
+    background-color: var(--accent-sage);  /* Berubah jadi hijau Sage yang lebih terang */
+    color: white;                          /* Teks berubah jadi putih */
+}
+
+/* Menyeragamkan ukuran foto di dalam Galeri Carousel */
+.foto-galeri {
+    height: 300px;        /* Tentukan tinggi yang seragam, sesuaikan angkanya jika dirasa kurang tinggi */
+    object-fit: cover;    /* Memotong foto secara proporsional agar tidak gepeng */
+    object-position: center; /* Fokus potongan di tengah foto */
+}
+
+/* STYLING WADAH NAVIGASI KANAN ATAS */
+.nav-kanan-atas {
+    position: fixed;
+    top: 20px;       /* Jarak dari ujung atas layar */
+    right: 15px;     /* Jarak dari ujung kanan layar */
+    z-index: 1030;
+    display: flex;
+    flex-direction: column; /* Menyusun bulatan berjejer ke bawah */
+    gap: 12px;       /* Jarak antar bulatan */
+}
+
+/* STYLING TOMBOL BULAT */
+.tombol-bulat {
+    width: 45px;          /* Lebar lingkaran */
+    height: 45px;         /* Tinggi lingkaran (harus sama dengan lebar) */
+    background-color: rgba(255, 255, 255, 0.85); /* Warna putih semi transparan */
+    backdrop-filter: blur(5px);
+    border-radius: 50%;   /* Ini yang membuat bentuknya bulat sempurna */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-heading); /* Warna hijau gelap untuk ikon */
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Bayangan agar terlihat melayang */
+    border: 1px solid rgba(156, 175, 136, 0.3); /* Garis tepi tipis warna sage */
+    transition: all 0.3s ease;
+}
+
+/* Mengatur ukuran ikon di dalam bulatan */
+.tombol-bulat i {
+    font-size: 1.3rem;
+}
+
+/* Efek animasi saat bulatan disentuh/diklik */
+.tombol-bulat:hover, .tombol-bulat:focus {
+    background-color: var(--accent-sage); /* Berubah jadi hijau sage */
+    color: white;                         /* Ikon berubah putih */
+    transform: scale(1.1);                /* Bulatan membesar sedikit */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* EFEK GULIR MULUS & JARAK AMAN (Scroll Margin) */
+html {
+    scroll-behavior: smooth;
+    /* scroll-padding-top: 80px; Angka ini akan menyisakan jarak 80px dari atas layar */
+}
